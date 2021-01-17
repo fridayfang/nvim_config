@@ -17,12 +17,32 @@
 ### 插件列表
 
 比较好用的插件：
-- `nerdtree`(<F3>启动)
+- `nerdtree`(<F3>启动)\
+\<C-w-w\> 可以在`nerdtree`和打开文件的buffer切换\
+\<Leader\>1 可以切换到第一个buffer
 - `nerdcommenter`(,ci)
 - `auto-pair`(比coc-pair好用)
-- `markdown-preview`(支持热启动，快捷键,m)
-- `coc-vim`(包括相关coc插件，支持LSP方式补全)
-- `floaterm`(轻松进入终端，可以查看执行结果而不用退出nvim)
-    
-最终效果:
+- `markdown-preview`(支持即改即显示，快捷键,m)
+- `coc-vim`(包括相关coc插件，支持LSP方式补全\
+安装`coc-clangd`支持clangd的补全(先要安装c`clangd`)\
+需要较好效果的补全需要:
+1.  `compile_command.json`, 通过cmake 根据CMakeLists.txt生成
+2.  在`.bashrc/.zshrc`中加入`CPLUS_INCLUDE_PATH`(加入需要搜索的头文件目录),这样可以自动补全include头文件
+- `floaterm`(轻松进入终端，可以查看执行结果而不用退出nvim)\
+,ft 开启一个新终端\
+,fh 隐藏终端
+
+- `vim-surround` 轻松对文本增减括号\
+normal mode: \ 
+`ds'`: 去除''\
+`cs'[`: 改'为[\
+`ysw"`:对光标单词加""\
+`yss"`:对整行加""\
+
+vision mode: \
+
+选中文本(`v/V`), 按S[:文本加上[]
+## 最终效果:
 ![](./nvim.png)
+
+

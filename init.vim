@@ -24,6 +24,7 @@ call plug#begin('~/.config/vim_plug/plugged')
     Plug 'voldikss/vim-translator'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'jackguo380/vim-lsp-cxx-highlight'
+    Plug 'tpope/vim-surround'
 call plug#end()
  
 filetype plugin on
@@ -520,3 +521,6 @@ let g:cpp_posix_standard = 1
 let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_no_function_highlight = 1
 let g:cpp_concepts_highlight = 1
+
+
+ 
