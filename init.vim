@@ -9,7 +9,7 @@ call plug#begin('~/.config/vim_plug/plugged')
     Plug 'scrooloose/nerdcommenter'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'luochen1990/rainbow'
-    " Plug 'octol/vim-cpp-enhanced-highlight'
+    Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'Yggdroot/indentLine'
     Plug 'preservim/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -511,3 +511,12 @@ let g:floaterm_keymap_toggle = '<Leader>fh' " means hidden;   <Leader>t is used 
 let g:floaterm_keymap_prev   = '<Leader>fp'
 let g:floaterm_keymap_next   = '<Leader>fn'
 let g:floaterm_keymap_kill   = '<Leader>fk'
+
+" +======================= vim-cpp-enhanced-highlight =======
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_posix_standard = 1
+let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_no_function_highlight = 1
+let g:cpp_concepts_highlight = 1
