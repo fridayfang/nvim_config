@@ -5,10 +5,11 @@ call plug#begin('~/.config/vim_plug/plugged')
     Plug 'vim-scripts/ctags.vim'
     Plug 'tmux-plugins/vim-tmux-focus-events'
     Plug 'vim-airline/vim-airline'
+    Plug 'bling/vim-bufferline'
     Plug 'scrooloose/nerdcommenter'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'luochen1990/rainbow'
-    Plug 'octol/vim-cpp-enhanced-highlight'
+    " Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'Yggdroot/indentLine'
     Plug 'preservim/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -22,6 +23,7 @@ call plug#begin('~/.config/vim_plug/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     Plug 'voldikss/vim-translator'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
  
 filetype plugin on
@@ -112,7 +114,7 @@ let g:indent_guides_start_level           = 2  " 从第二层开始可视化显�
  
 " +================================== NERDTree =======================================+ "
 " autocmd vimenter * NERDTree  "自动开启Nerdtree
-let g:NERDTreeWinSize = 20 "设定 NERDTree 视窗大小
+let g:NERDTreeWinSize = 24 "设定 NERDTree 视窗大小
 let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
 "打开vim时如果没有文件自动打开NERDTree
 autocmd vimenter * if !argc()|NERDTree|endif
@@ -494,3 +496,18 @@ function! LightlineGitBlame() abort
   " return blame
   return winwidth(0) > 120 ? blame : ''
 endfunction
+
+
+" +========================== c++ syntax highlighting =================
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+
+
+" +======================== floaterm ===================
+" Configuration example
+let g:floaterm_keymap_new    = '<Leader>ft'
+let g:floaterm_keymap_toggle = '<Leader>fh' " means hidden;   <Leader>t is used by vim-translator
+let g:floaterm_keymap_prev   = '<Leader>fp'
+let g:floaterm_keymap_next   = '<Leader>fn'
+let g:floaterm_keymap_kill   = '<Leader>fk'
